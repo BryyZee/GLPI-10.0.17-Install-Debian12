@@ -118,7 +118,7 @@ read plugin
 
 # Configuration du mot de passe root de MariaDB
 echo "Lancement du script de sécurisation de MariaDB..."
-./mysql_secure_installation.sh
+./mysql_secure_install.sh
 echo "Lancement du script de sécurisation de MariaDB...Fait"
 
 # Création et configuration de la base de données GLPI
