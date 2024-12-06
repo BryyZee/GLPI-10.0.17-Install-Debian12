@@ -60,7 +60,7 @@ apply_gradient() {
 apply_gradient
 
 echo "Entrez l'adresse IP ou le nom de domaine de votre futur serveur GLPI :"
-read -s ip_glpi_srv
+read  ip_glpi_srv
 
 sudo sed -i "s/@IP-srv/$ip_glpi_srv/g" glpi-administratif.conf
 
