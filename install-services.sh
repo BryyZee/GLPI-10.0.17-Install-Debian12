@@ -1,8 +1,10 @@
 #!/bin/bash
 
 # Mise à jour des paquets et installation des services
-echo "Mise à jour des paquets et installation des services nécessaires..."
-sudo apt-get update && sudo apt-get upgrade -y 1>/dev/null 2>error.log
+echo "Mise à jour des paquets nécessaires..."
+sudo apt-get update 1>/dev/null 2>error.log
+echo "Installation des services nécessaires..."
+sudo apt-get upgrade -y 1>/dev/null 2>error.log
 echo "Installation des services Apache2, PHP, et MariaDB..."
 sudo apt-get install apache2 php mariadb-server -y 1>/dev/null 2>error.log
 

@@ -5,7 +5,7 @@ path_base=$(pwd)
 # Téléchargement et installation de GLPI 10.0.17
 echo "Téléchargement de GLPI 10.0.17..."
 cd /tmp
-wget https://github.com/glpi-project/glpi/releases/download/10.0.17/glpi-10.0.17.tgz
+wget -q --show-progress https://github.com/glpi-project/glpi/releases/download/10.0.17/glpi-10.0.17.tgz
 
 echo "Décompression de l'archive GLPI dans /var/www/..."
 sudo tar -xzvf glpi-10.0.17.tgz -C /var/www/ 1>/dev/null 2>error.log
