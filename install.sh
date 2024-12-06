@@ -59,6 +59,12 @@ apply_gradient() {
 # Appeler la fonction pour afficher l'art en couleur
 apply_gradient
 
+echo "Entrez l'adresse IP ou le nom de domaine de votre futur serveur GLPI :"
+read -s ip_glpi_srv
+
+sudo sed -i "s/@IP-srv/$ip_glpi_srv/g" glpi-administratif.conf
+
+
 # Demander à l'utilisateur de créer un mot de passe root MySQL
 echo "Créez votre mot de passe root MySQL :"
 read -s MYSQL_ROOT_PASSWORD
